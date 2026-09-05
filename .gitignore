@@ -1,0 +1,13 @@
+# Security & Credentials
+.env
+*.env
+
+# Dependencies
+node_modules/
+
+# FixyCat Workspace Sandbox Folder
+fixycat_sandbox_workspace/
+
+# OS Logs
+.DS_Store
+npm-debug.log*

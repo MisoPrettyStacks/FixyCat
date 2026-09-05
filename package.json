@@ -1,0 +1,15 @@
+{
+  "name": "fixycat",
+  "version": "1.0.0",
+  "description": "🐾 Autonomous repo fixer and obfuscation swarm utility",
+  "main": "swarm.js",
+  "type": "module",
+  "scripts": {
+    "start": "node swarm.js"
+  },
+  "dependencies": {
+    "@langchain/openai": "^0.0.28",
+    "dotenv": "^16.4.5",
+    "picocolors": "^1.0.1"
+  }
+}
