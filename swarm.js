@@ -18,9 +18,16 @@ if (!OPENAI_API_KEY || !GITHUB_TOKEN || !TARGET_REPO_URL) {
 }
 
 const llm = new ChatOpenAI({
-    modelName: "gpt-4o",
+    modelName: "meta-llama/llama-3.1-405b-instruct", // You can also use "openai/gpt-4o" via OpenRouter
     openAIApiKey: OPENAI_API_KEY,
-    temperature: 0.2
+    temperature: 0.2,
+    configuration: {
+        baseURL: "https://openrouter.ai",
+        defaultHeaders: {
+            "HTTP-Referer": "https://github.com", // Optional tracking header
+            "X-Title": "FixyCat Repo Swarm"
+        }
+    }
 });
 
 const rl = readline.createInterface({
